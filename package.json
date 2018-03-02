@@ -1,0 +1,25 @@
+{
+  "name": "demo-webpush",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "dot-env": "0.0.1",
+    "dotenv": "^5.0.1",
+    "express": "^4.16.2",
+    "googleapis": "^26.0.1",
+    "gtoken": "file:../node-gtoken",
+    "gtoken-china": "file:../node-gtoken-china",
+    "https-proxy-agent": "^2.1.1",
+    "morgan": "^1.9.0",
+    "node-fetch": "^2.0.0",
+    "web-push": "^3.3.0"
+  }
+}
