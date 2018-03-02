@@ -23,10 +23,6 @@ const HttpsProxyAgent = require('https-proxy-agent')
 const agent = new HttpsProxyAgent(process.env.HTTP_PROXY)
 const { GoogleToken } = require('gtoken-china')
 
-// const axios = require('axios')
-// axios.defaults.httpsAgent = agent
-// const { GoogleToken } = require('gtoken')
-
 
 // Firebase Admin SDK
 // 在以下网页中下载你的私钥：
@@ -36,15 +32,10 @@ const key = JSON.parse(fs.readFileSync(__dirname + '/firebase-adminsdk.json', 'u
 const gtoken = new GoogleToken({
   agent,
   iss: key.client_email,
-  // sub: 'heineiuo@gmail.com',
   scope: [
-    // 'https://www.googleapis.com/auth/plus.me',
-    // 'https://www.googleapis.com/auth/calendar',
     'https://www.googleapis.com/auth/firebase.messaging'
   ],
-  // keyFile: __dirname + '/service-account.json',
   key: key.private_key,
-  // additionalClaims: params.additionalClaims
 })
 
 
