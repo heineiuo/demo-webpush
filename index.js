@@ -28,7 +28,10 @@ const { GoogleToken } = require('gtoken-china')
 // const { GoogleToken } = require('gtoken')
 
 
-const key = JSON.parse(fs.readFileSync(__dirname + '/service-account.json', 'utf8'))
+// Firebase Admin SDK
+// 在以下网页中下载你的私钥：
+// https://console.firebase.google.com/project/ 这里改成你的项目id /settings/serviceaccounts/adminsdk
+const key = JSON.parse(fs.readFileSync(__dirname + '/firebase-adminsdk.json', 'utf8'))
 
 const gtoken = new GoogleToken({
   agent,
